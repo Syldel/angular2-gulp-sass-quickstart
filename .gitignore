@@ -1,0 +1,7 @@
+.idea
+build
+node_modules
+typings
+*.bak
+.DS_Store
+Thumbs.db

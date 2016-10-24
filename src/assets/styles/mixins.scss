@@ -1,16 +1,15 @@
+// =============================================================================
+// Font Face
+// =============================================================================
 @mixin font-face($name, $path, $exts: eot woff2 woff ttf svg) {
     $src: null;
-    $path: '../fonts/' + $path;
 
-    $extmods: (
-        eot: "?",
-        svg: "#"
-    );
+    if type-of($exts) {
+        $exts: str-explode($exts, ' ');
+    }
 
-    $formats: (
-        otf: "opentype",
-        ttf: "truetype"
-    );
+    $extmods: ( eot: "?", svg: "#" + str-replace($name, " ", "_") );
+    $formats: ( otf: "opentype", ttf: "truetype" );
 
     @each $ext in $exts {
         $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);

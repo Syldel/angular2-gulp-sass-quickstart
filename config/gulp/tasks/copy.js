@@ -56,5 +56,12 @@ gulp.task("copy-assets-images", ['clean-assets-images'], () => {
       /*.on('end', function() {
         console.log('Gulp task "copy-assets-images" COMPLETE');
       });*/
+});
+
+
+gulp.task("copy-bootstrap-fonts", () => {
+  
+  return gulp.src(['node_modules/bootstrap-sass/assets/fonts/bootstrap/**'])
+    .pipe(gulp.dest(config.assets + "fonts/bootstrap"));
 
 });

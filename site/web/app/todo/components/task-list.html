@@ -1,14 +1,28 @@
+<br/>
+<div>
+  Bootstrap Glyphicons :
+  <span class="glyphicon glyphicon-search"></span> - <span class="glyphicon glyphicon-music"></span> - <span class="glyphicon glyphicon-heart"></span> - <span class="glyphicon glyphicon-star"></span>
+</div>
+
+<div>
+  <span>Roboto Font :</span>
+  <span style="font-family: Roboto;">Font Family Roboto</span>
+</div>
+
 <h1>Todo tasks ({{todoCount}})</h1>
-<ul>
-    <li *ngFor="let task of tasks" [class.selected]="task == selectedTask">
-        <a href="javascript:void(0)" (click)="select(task)">
-            {{task.name}}
-            <span [ngSwitch]="task.done">
-                <template [ngSwitchCase]="true">[Done]</template>
-                <template [ngSwitchCase]="false">[Todo]</template>
-            </span>
-        </a>
-    </li>
-</ul>
+<div>
+  Tasks list :
+  <ul>
+      <li *ngFor="let task of tasks" [class.selected]="task == selectedTask">
+          <a href="javascript:void(0)" (click)="select(task)">
+              {{task.name}}
+              <span [ngSwitch]="task.done">
+                  <template [ngSwitchCase]="true">[Done]</template>
+                  <template [ngSwitchCase]="false">[Todo]</template>
+              </span>
+          </a>
+      </li>
+  </ul>
+</div>
 
 <task *ngIf="selectedTask" [task]="selectedTask" (statusChanged)="calculateTodoCount()"></task>

@@ -5,6 +5,14 @@ var config = require('../config')();
 
 const runSequence = require('run-sequence');
 
+
+gulp.task("install", () => {
+    console.log("Installing the project ...");
+
+    runSequence('copy-bootstrap-fonts', 'build');
+});
+
+
 /**
  * Build the project.
  */

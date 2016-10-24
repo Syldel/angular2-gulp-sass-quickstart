@@ -238,8 +238,8 @@ th {
 
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot");
-  src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
+  src: url("../assets/fonts/bootstrap/glyphicons-halflings-regular.eot");
+  src: url("../assets/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("../assets/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../assets/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../assets/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
 
 .glyphicon {
   position: relative;
@@ -5816,7 +5816,7 @@ button.close {
 
 @font-face {
   font-family: "Roboto";
-  src: url("../fonts/Roboto/Roboto-Regular-webfont.eot svg ttf woff") format("eot svg ttf woff"); }
+  src: url("../assets/fonts/Roboto/Roboto-Regular-webfont.eot?") format("eot"), url("../assets/fonts/Roboto/Roboto-Regular-webfont.svg#Roboto") format("svg"), url("../assets/fonts/Roboto/Roboto-Regular-webfont.ttf") format("truetype"), url("../assets/fonts/Roboto/Roboto-Regular-webfont.woff") format("woff"); }
 
 .panel-title {
   font-weight: bold;

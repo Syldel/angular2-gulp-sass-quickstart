@@ -50,7 +50,7 @@ For dev dependencies, peer dependencies and optional dependencies you pass the -
 
 Build the project by running the following command:
 
-> gulp clean & gulp build
+> gulp clean & gulp install
 
 `site/web` directory will be created during the build
 

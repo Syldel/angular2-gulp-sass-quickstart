@@ -1,18 +1,28 @@
-<section>
-    <nav>
-        <a routerLink="/tasks">Task List</a>
-        <a routerLink="/about">About</a>
-    </nav>
-    <router-outlet></router-outlet>
-</section>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
 
-<div class="container" >
-  <div class="row" >
-    <div class="col-md-3" style="background-color: #CCAAAA;">
-      test
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li role="presentation" routerLinkActive="active">
+          <a routerLink="/tasks" >Task List</a>
+        </li>
+        <li role="presentation" routerLinkActive="active">
+          <a routerLink="/grid" >Grid</a>
+        </li>
+        <li role="presentation" routerLinkActive="active">
+          <a routerLink="/about" >About</a>
+        </li>
+      </ul>
     </div>
-    <div class="col-md-9" style="background-color: #CCAAAA;">
-      <img src="assets/images/ng2.jpg" class="img-responsive" alt="angular2"/>
-    </div>
+
   </div>
-</div>
+</nav>
+
+<router-outlet></router-outlet>
+
+<footer class="footer">
+  <div class="container">
+    <p class="centered">Place sticky footer content here.</p>
+  </div>
+</footer>

@@ -1,4 +1,4 @@
-System.register(['@angular/core', '@angular/platform-browser', "./app.component", "./todo/components/task-list.component", "./about/components/about.component", "./todo/components/task.component", './app.routing', "@angular/forms"], function(exports_1, context_1) {
+System.register(['@angular/core', '@angular/platform-browser', "./app.component", "./todo/components/task-list.component", "./about/components/about.component", "./grid/components/grid.component", "./todo/components/task.component", './app.routing', "@angular/forms"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['@angular/core', '@angular/platform-browser', "./app.component"
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, platform_browser_1, app_component_1, task_list_component_1, about_component_1, task_component_1, app_routing_1, forms_1;
+    var core_1, platform_browser_1, app_component_1, task_list_component_1, about_component_1, grid_component_1, task_component_1, app_routing_1, forms_1;
     var AppModule;
     return {
         setters:[
@@ -28,6 +28,9 @@ System.register(['@angular/core', '@angular/platform-browser', "./app.component"
             },
             function (about_component_1_1) {
                 about_component_1 = about_component_1_1;
+            },
+            function (grid_component_1_1) {
+                grid_component_1 = grid_component_1_1;
             },
             function (task_component_1_1) {
                 task_component_1 = task_component_1_1;
@@ -53,6 +56,7 @@ System.register(['@angular/core', '@angular/platform-browser', "./app.component"
                             app_component_1.AppComponent,
                             task_component_1.TaskComponent,
                             task_list_component_1.TaskListComponent,
+                            grid_component_1.GridComponent,
                             about_component_1.AboutComponent
                         ],
                         providers: [

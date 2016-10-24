@@ -1,7 +1,7 @@
-System.register(["@angular/router", "./todo/components/task-list.component", "./about/components/about.component"], function(exports_1, context_1) {
+System.register(["@angular/router", "./todo/components/task-list.component", "./about/components/about.component", "./grid/components/grid.component"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
-    var router_1, task_list_component_1, about_component_1;
+    var router_1, task_list_component_1, about_component_1, grid_component_1;
     var appRoutes, appRoutingProviders, routing;
     return {
         setters:[
@@ -13,11 +13,15 @@ System.register(["@angular/router", "./todo/components/task-list.component", "./
             },
             function (about_component_1_1) {
                 about_component_1 = about_component_1_1;
+            },
+            function (grid_component_1_1) {
+                grid_component_1 = grid_component_1_1;
             }],
         execute: function() {
             appRoutes = [
                 { path: '', redirectTo: 'tasks', pathMatch: 'full' },
                 { path: 'tasks', component: task_list_component_1.TaskListComponent, data: { title: 'TaskList' } },
+                { path: 'grid', component: grid_component_1.GridComponent, data: { title: 'GridExample' } },
                 { path: 'about', component: about_component_1.AboutComponent, data: { title: 'About' } }
             ];
             exports_1("appRoutingProviders", appRoutingProviders = []);

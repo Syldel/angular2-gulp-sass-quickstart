@@ -23,7 +23,7 @@ gulp.task('browserSync', function (cb) {
 // use default task to launch Browsersync and watch JS files
 gulp.task('serve', function () {
   console.log("Launch 'serve' Gulp Run sequence");
-  runSequence('ts', 'sass-common', 'sass-app', 'browserSync', 'watch');
+  runSequence('build', 'browserSync', 'watch');
 });
 
 /**
@@ -35,7 +35,7 @@ gulp.task('watch', () => {
         console.log('TypeScript file ' + e.path + ' has been changed. Compiling.');
 
         gulp.start('ts', function () {
-          console.log('Watch "ts" gulp.start complete');
+          console.log('Watch "ts" task complete');
           browserSync.reload();
         });
     });
@@ -44,7 +44,7 @@ gulp.task('watch', () => {
         console.log('File ' + e.path + ' has been changed.');
 
         gulp.start('copy-app-html', function () {
-          console.log('Watch "copy-app-html" gulp.start complete ');
+          console.log('Watch "copy-app-html" task complete');
           browserSync.reload();
         });
     });
@@ -101,7 +101,7 @@ gulp.task('watch', () => {
       console.log('Watch "src/assets/fonts/**" type:', e.type);
 
       gulp.start('copy-assets-fonts', function () {
-        console.log('Watch "copy-assets-fonts" gulp.start complete ');
+        console.log('Watch "copy-assets-fonts" task complete');
         browserSync.reload();
       });
     });
@@ -110,7 +110,7 @@ gulp.task('watch', () => {
       console.log('Watch "src/assets/images/**" type:', e.type);
 
       gulp.start('copy-assets-images', function () {
-        console.log('Watch "copy-assets-images" gulp.start complete ');
+        console.log('Watch "copy-assets-images" task complete');
         browserSync.reload();
       });
     });
@@ -119,7 +119,16 @@ gulp.task('watch', () => {
       console.log('Watch "src/assets/**/*.scss", "src/assets/**/*.sass" type:', e.type);
 
       gulp.start('sass-common', function () {
-        console.log('Watch "sass" gulp.start complete ');
+        console.log('Watch "sass" task complete');
+        browserSync.reload();
+      });
+    });
+
+    gulp.watch(["src/sprites/**"], function (e) {
+      console.log('Watch "src/sprites/**" type:', e.type);
+
+      gulp.start('sprite', function () {
+        console.log('Watch "sprite" task complete');
         browserSync.reload();
       });
     });

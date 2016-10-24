@@ -1,0 +1,198 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-home_mod01picto01 {
+  background-image: url(sprite.png);
+  background-position: -280px 0px;
+  width: 60px;
+  height: 60px;
+}
+.icon-home_mod01picto01On {
+  background-image: url(sprite.png);
+  background-position: -180px -200px;
+  width: 60px;
+  height: 60px;
+}
+.icon-home_mod01picto02 {
+  background-image: url(sprite.png);
+  background-position: -340px 0px;
+  width: 60px;
+  height: 60px;
+}
+.icon-home_mod01picto02On {
+  background-image: url(sprite.png);
+  background-position: -61px -80px;
+  width: 60px;
+  height: 60px;
+}
+.icon-home_mod01picto03 {
+  background-image: url(sprite.png);
+  background-position: -160px 0px;
+  width: 60px;
+  height: 60px;
+}
+.icon-home_mod01picto03On {
+  background-image: url(sprite.png);
+  background-position: -160px -60px;
+  width: 60px;
+  height: 60px;
+}
+.icon-home_mod01picto04 {
+  background-image: url(sprite.png);
+  background-position: 0px -140px;
+  width: 60px;
+  height: 60px;
+}
+.icon-home_mod01picto04On {
+  background-image: url(sprite.png);
+  background-position: -60px -140px;
+  width: 60px;
+  height: 60px;
+}
+.icon-home_mod01picto05 {
+  background-image: url(sprite.png);
+  background-position: -120px -140px;
+  width: 60px;
+  height: 60px;
+}
+.icon-home_mod01picto05On {
+  background-image: url(sprite.png);
+  background-position: -220px 0px;
+  width: 60px;
+  height: 60px;
+}
+.icon-home_mod01picto06 {
+  background-image: url(sprite.png);
+  background-position: -220px -60px;
+  width: 60px;
+  height: 60px;
+}
+.icon-home_mod01picto06On {
+  background-image: url(sprite.png);
+  background-position: -220px -120px;
+  width: 60px;
+  height: 60px;
+}
+.icon-home_mod01picto07 {
+  background-image: url(sprite.png);
+  background-position: 0px -200px;
+  width: 60px;
+  height: 60px;
+}
+.icon-home_mod01picto07On {
+  background-image: url(sprite.png);
+  background-position: -60px -200px;
+  width: 60px;
+  height: 60px;
+}
+.icon-home_mod01picto08 {
+  background-image: url(sprite.png);
+  background-position: -120px -200px;
+  width: 60px;
+  height: 60px;
+}
+.icon-home_mod01picto08On {
+  background-image: url(sprite.png);
+  background-position: -340px -240px;
+  width: 60px;
+  height: 60px;
+}
+.icon-module01_roundPicto {
+  background-image: url(sprite.png);
+  background-position: -80px 0px;
+  width: 80px;
+  height: 80px;
+}
+.icon-module02_mod02picto01 {
+  background-image: url(sprite.png);
+  background-position: -280px -60px;
+  width: 60px;
+  height: 60px;
+}
+.icon-module02_mod02picto01On {
+  background-image: url(sprite.png);
+  background-position: -280px -120px;
+  width: 60px;
+  height: 60px;
+}
+.icon-module02_mod02picto02 {
+  background-image: url(sprite.png);
+  background-position: -280px -180px;
+  width: 60px;
+  height: 60px;
+}
+.icon-module02_mod02picto02On {
+  background-image: url(sprite.png);
+  background-position: 0px -260px;
+  width: 60px;
+  height: 60px;
+}
+.icon-module02_mod02picto03 {
+  background-image: url(sprite.png);
+  background-position: -60px -260px;
+  width: 60px;
+  height: 60px;
+}
+.icon-module02_mod02picto03On {
+  background-image: url(sprite.png);
+  background-position: -120px -260px;
+  width: 60px;
+  height: 60px;
+}
+.icon-module02_mod02picto04 {
+  background-image: url(sprite.png);
+  background-position: -180px -260px;
+  width: 60px;
+  height: 60px;
+}
+.icon-module02_mod02picto04On {
+  background-image: url(sprite.png);
+  background-position: -240px -260px;
+  width: 60px;
+  height: 60px;
+}
+.icon-module02_mod02picto05 {
+  background-image: url(sprite.png);
+  background-position: 0px -80px;
+  width: 61px;
+  height: 60px;
+}
+.icon-module02_mod02picto05On {
+  background-image: url(sprite.png);
+  background-position: -340px -60px;
+  width: 60px;
+  height: 60px;
+}
+.icon-module02_mod02picto06 {
+  background-image: url(sprite.png);
+  background-position: -340px -120px;
+  width: 60px;
+  height: 60px;
+}
+.icon-module02_mod02picto06On {
+  background-image: url(sprite.png);
+  background-position: -340px -180px;
+  width: 60px;
+  height: 60px;
+}
+.icon-module02_roundPicto {
+  background-image: url(sprite.png);
+  background-position: 0px 0px;
+  width: 80px;
+  height: 80px;
+}

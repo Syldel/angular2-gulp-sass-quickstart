@@ -7,16 +7,13 @@
     if type-of($exts) {
         $exts: str-explode($exts, ' ');
     }
-
     $extmods: ( eot: "?", svg: "#" + str-replace($name, " ", "_") );
     $formats: ( otf: "opentype", ttf: "truetype" );
-
     @each $ext in $exts {
         $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
         $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
         $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
     }
-
     @font-face {
         font-family: quote($name);
         src: $src;
@@ -24,41 +21,41 @@
 }
 
 @mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-      -ms-border-radius: $radius;
-          border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
 }
 
 // generic transform
 @mixin transform($transforms) {
-	   -moz-transform: $transforms;
-	     -o-transform: $transforms;
-	    -ms-transform: $transforms;
-	-webkit-transform: $transforms;
-          transform: $transforms;
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
 }
 // rotate
-@mixin rotate ($deg) {
-  @include transform(rotate(#{$deg}deg));
+@mixin rotate($deg) {
+     @include transform(rotate(#{$deg}deg));
 }
 // scale
 @mixin scale($scale) {
-	 @include transform(scale($scale));
+     @include transform(scale($scale));
 }
 // translate
-@mixin translate ($x, $y) {
-   @include transform(translate($x, $y));
+@mixin translate($x, $y) {
+     @include transform(translate($x, $y));
 }
 // skew
-@mixin skew ($x, $y) {
-   @include transform(skew(#{$x}deg, #{$y}deg));
+@mixin skew($x, $y) {
+     @include transform(skew(#{$x}deg, #{$y}deg));
 }
-//transform origin
-@mixin transform-origin ($origin) {
+// transform origin
+@mixin transform-origin($origin) {
     moz-transform-origin: $origin;
-	     -o-transform-origin: $origin;
-	    -ms-transform-origin: $origin;
-	-webkit-transform-origin: $origin;
-          transform-origin: $origin;
+    -o-transform-origin: $origin;
+    -ms-transform-origin: $origin;
+    -webkit-transform-origin: $origin;
+    transform-origin: $origin;
 }

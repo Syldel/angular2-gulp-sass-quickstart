@@ -52,7 +52,7 @@ Build the project by running the following command:
 
 > gulp clean & gulp install
 
-`site/web` directory will be created during the build
+<!-- `site/web` directory will be created during the build -->
 
 #### 5. Starting the application
 

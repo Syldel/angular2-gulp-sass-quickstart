@@ -3,5 +3,7 @@ build
 node_modules
 typings
 *.bak
+*.bkp
 .DS_Store
 Thumbs.db
+src/assets/fonts/bootstrap/*

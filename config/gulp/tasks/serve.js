@@ -124,8 +124,8 @@ gulp.task('watch', () => {
       });
     });
 
-    gulp.watch(["src/sprites/**"], function (e) {
-      console.log('Watch "src/sprites/**" type:', e.type);
+    gulp.watch(["src/assets/sprites/**"], function (e) {
+      console.log('Watch "src/assets/sprites/**" type:', e.type);
 
       gulp.start('sprite', function () {
         console.log('Watch "sprite" task complete');

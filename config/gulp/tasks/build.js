@@ -5,17 +5,20 @@ var config = require('../config')();
 
 const runSequence = require('run-sequence');
 
-gulp.task("install", () => {
+/**
+ * Install the project.
+ */
+gulp.task("install", (cb) => {
     console.log("Installing the project ...");
 
-    runSequence('copy-bootstrap-fonts', 'build', 'resources', 'libs');
+    runSequence('copy-bootstrap-fonts', 'build', 'resources', 'libs', cb);
 });
 
 /**
  * Build the project.
  */
-gulp.task("build", () => {
+gulp.task("build", (cb) => {
     console.log("Building the project ...");
 
-    runSequence('ts', 'sass-common', 'sass-app', 'sprite');
+    runSequence('ts', 'sass-common', 'sass-app', 'sprite', cb);
 });

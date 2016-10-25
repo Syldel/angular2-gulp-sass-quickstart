@@ -3,6 +3,8 @@
 var gulp = require('gulp');
 var config = require('../config')();
 
+var imagemin = require('gulp-imagemin');
+
 const runSequence = require('run-sequence');
 
 gulp.task('copy-app-html', ['clean-app-html'], () => {
@@ -56,6 +58,7 @@ gulp.task("copy-assets-fonts", ['clean-assets-fonts'], () => {
 gulp.task("copy-assets-images", ['clean-assets-images'], () => {
 
   return gulp.src(['src/assets/images/**/*'])
+    .pipe(imagemin())
     .pipe(gulp.dest(config.build.path + "assets/images"));
 
       /*.on('end', function() {

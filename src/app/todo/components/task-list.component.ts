@@ -22,6 +22,7 @@ export class TaskListComponent implements OnInit {
     }
 
     ngOnInit() {
+        //console.log('TaskListComponent init this.tasks:', this.tasks);
         console.log("Todo component initialized with " + this.tasks.length + " tasks.");
     }
 

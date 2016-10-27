@@ -22,6 +22,10 @@ System.register(["@angular/core"], function(exports_1, context_1) {
                 function GridComponent() {
                 }
                 GridComponent.prototype.ngOnInit = function () {
+                    console.log('GridComponent ngOnInit');
+                };
+                GridComponent.prototype.ngOnDestroy = function () {
+                    console.log('GridComponent ngOnDestroy');
                 };
                 GridComponent = __decorate([
                     core_1.Component({

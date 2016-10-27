@@ -115,6 +115,15 @@ gulp.task('watch', () => {
       });
     });
 
+    gulp.watch(["src/assets/data/**/*.json"], function (e) {
+      console.log('Watch "src/assets/data/**" type:', e.type);
+
+      gulp.start('copy-assets-data', function () {
+        console.log('Watch "copy-assets-data" task complete');
+        browserSync.reload();
+      });
+    });
+
     gulp.watch(["src/assets/**/*.scss", "src/assets/**/*.sass"], function (e) {
       console.log('Watch "src/assets/**/*.scss", "src/assets/**/*.sass" type:', e.type);
 

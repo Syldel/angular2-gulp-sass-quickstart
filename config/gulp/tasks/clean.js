@@ -46,3 +46,8 @@ gulp.task('clean-assets-images', () => {
   return gulp.src(config.build.assets + 'images/**/*', {read: false})
     .pipe(clean());
 });
+
+gulp.task('clean-assets-data', () => {
+  return gulp.src(config.build.assets + 'data/**/*', {read: false})
+    .pipe(clean());
+});

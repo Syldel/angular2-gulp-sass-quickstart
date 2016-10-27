@@ -4,6 +4,7 @@ var gulp = require('gulp');
 var config = require('../config')();
 
 var imagemin = require('gulp-imagemin');
+var jsonminify = require('gulp-jsonminify');
 
 const runSequence = require('run-sequence');
 
@@ -29,7 +30,7 @@ gulp.task("resources", (cb) => {
     //return gulp.src(["src/**/*", "!**/*.ts", "!src/sprites", "!src/assets/styles", "!**/*.scss", "!**/*.sass"])
       //  .pipe(gulp.dest(config.build.path));
 
-    runSequence('copy-root-elements', 'copy-app-html', 'copy-app-css', 'copy-assets-fonts', 'copy-assets-images', cb);
+    runSequence('copy-root-elements', 'copy-app-html', 'copy-app-css', 'copy-assets-fonts', 'copy-assets-images', 'copy-assets-data', cb);
 });
 
 /**
@@ -51,7 +52,7 @@ gulp.task("libs", () => {
 gulp.task("copy-assets-fonts", ['clean-assets-fonts'], () => {
 
   return gulp.src(['src/assets/fonts/**/*'])
-    .pipe(gulp.dest(config.build.path + "assets/fonts"));
+    .pipe(gulp.dest(config.build.assets + "fonts"));
 
 });
 
@@ -59,11 +60,19 @@ gulp.task("copy-assets-images", ['clean-assets-images'], () => {
 
   return gulp.src(['src/assets/images/**/*'])
     .pipe(imagemin())
-    .pipe(gulp.dest(config.build.path + "assets/images"));
+    .pipe(gulp.dest(config.build.assets + "images"));
 
       /*.on('end', function() {
         console.log('Gulp task "copy-assets-images" COMPLETE');
       });*/
+});
+
+gulp.task("copy-assets-data", ['clean-assets-data'], () => {
+
+  return gulp.src(['src/assets/data/**/*.json'])
+    .pipe(jsonminify())
+    .pipe(gulp.dest(config.build.assets + "data"));
+
 });
 
 gulp.task("copy-bootstrap-fonts", () => {

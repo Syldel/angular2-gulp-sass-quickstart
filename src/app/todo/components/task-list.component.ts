@@ -26,12 +26,11 @@ export class TaskListComponent implements OnInit {
         console.log("Todo component initialized with " + this.tasks.length + " tasks.");
 
         // execute callback when the page is ready:
-        //Zepto(function($){
-          //console.log('Ready to Zepto!');
+        Zepto(function($){
+          console.log('Ready to Zepto!');
 
           $(".red_square").addClass("move");
-
-        //});
+        });
 
     }
 

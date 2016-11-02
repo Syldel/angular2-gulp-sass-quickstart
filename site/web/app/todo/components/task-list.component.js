@@ -31,10 +31,10 @@ System.register(["@angular/core", "../services/task-service"], function(exports_
                     //console.log('TaskListComponent init this.tasks:', this.tasks);
                     console.log("Todo component initialized with " + this.tasks.length + " tasks.");
                     // execute callback when the page is ready:
-                    //Zepto(function($){
-                    //console.log('Ready to Zepto!');
-                    $(".red_square").addClass("move");
-                    //});
+                    Zepto(function ($) {
+                        console.log('Ready to Zepto!');
+                        $(".red_square").addClass("move");
+                    });
                 };
                 TaskListComponent.prototype.calculateTodoCount = function () {
                     this.todoCount = this.tasks.filter(function (t) { return !t.done; }).length;

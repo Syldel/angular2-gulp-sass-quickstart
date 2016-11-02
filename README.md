@@ -27,6 +27,10 @@ A basic Angular2 application with Gulp as build system.
 
 > npm i -g ts-node@1.3.0
 
+- bower
+
+> npm install -g bower
+
 
 #### 3. Installing dependencies
 
@@ -46,6 +50,7 @@ Adding a new dependency is easy, simply call :
 For dev dependencies, peer dependencies and optional dependencies you pass the --dev --peer --optional respectively.
 > yarn add gulp --dev
 
+
 #### 4. Building the project
 
 Build the project by running the following command:
@@ -53,6 +58,7 @@ Build the project by running the following command:
 > gulp clean & gulp install
 
 <!-- `site/web` directory will be created during the build -->
+
 
 #### 5. Starting the application
 

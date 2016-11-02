@@ -59,3 +59,53 @@
     -webkit-transform-origin: $origin;
     transform-origin: $origin;
 }
+
+
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+
+
+//.object-to-animate {
+//  @include animation('move-the-object .5s 1', 'move-the-object-again .5s 1 .5s');
+//}
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)+ " normal forwards"};
+
+        // animation-iteration-count, animation-direction, animation-fill-mode
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    -o-animation:      $animations;
+    animation:         $animations;
+}
+
+// Tip: For best browser support, you should always define both the 0% and the 100% selectors.
+//@include keyframes(move-the-object) {
+//  0%   { left: 100px; }
+//  100% { left: 200px; }
+//}
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}

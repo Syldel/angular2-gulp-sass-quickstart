@@ -1,0 +1,25 @@
+{
+  "name": "angular2-gulp-sass",
+  "description": "Angular2 with Gulp QuickStart",
+  "main": "index.js",
+  "authors": [
+    "Sylvain D."
+  ],
+  "license": "MIT",
+  "keywords": [
+    "angular2",
+    "gulp",
+    "bower"
+  ],
+  "homepage": "https://github.com/Syldel/angular2-gulp-sass-quickstart",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "zepto": "^1.1.6"
+  }
+}

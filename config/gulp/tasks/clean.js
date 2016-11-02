@@ -51,3 +51,8 @@ gulp.task('clean-assets-data', () => {
   return gulp.src(config.build.assets + 'data/**/*', {read: false})
     .pipe(clean());
 });
+
+gulp.task('clean-bower-components', () => {
+  return gulp.src(config.bower.components, {read: false})
+    .pipe(clean());
+});

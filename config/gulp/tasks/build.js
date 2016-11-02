@@ -11,7 +11,7 @@ const runSequence = require('run-sequence');
 gulp.task("install", (cb) => {
     console.log("Installing the project ...");
 
-    runSequence('copy-bootstrap-fonts', 'build', 'resources', 'libs', cb);
+    runSequence('copy-bootstrap-fonts', 'build', 'resources', 'libs', 'bower', cb);
 });
 
 /**

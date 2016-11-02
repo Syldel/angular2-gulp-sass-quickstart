@@ -25,3 +25,29 @@
 
   .centered
     margin: 20px 0
+
+.red_square
+  width: 50px
+  height: 50px
+  background-color: #FF1111
+
+  &.move
+
+    // animation: name duration timing-function delay iteration-count direction fill-mode play-state;
+    @include animation('move-the-red-square 1.5s 1 0s', 'move-the-red-square-again 1.5s 1 1.5s')
+
+    @include keyframes(move-the-red-square)
+      0%
+        width: 50px
+      100%
+        width: 200px
+        background-color: #FFFF11
+
+    @include keyframes(move-the-red-square-again)
+      0%
+        width: 200px
+      50%
+        top: 100px
+      100%
+        width: 400px
+        background-color: #FF11FF

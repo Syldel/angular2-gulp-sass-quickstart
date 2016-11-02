@@ -1,5 +1,6 @@
-System.register(["@angular/core", "@angular/http", "rxjs/Observable", "rxjs/add/operator/map", "rxjs/add/operator/catch", "rxjs/add/observable/throw", "../models/language"], function (exports_1, context_1) {
+System.register(["@angular/core", '@angular/http', 'rxjs/Observable', 'rxjs/add/operator/map', 'rxjs/add/operator/catch', 'rxjs/add/observable/throw', "../models/language"], function(exports_1, context_1) {
     "use strict";
+    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -9,10 +10,10 @@ System.register(["@angular/core", "@angular/http", "rxjs/Observable", "rxjs/add/
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var __moduleName = context_1 && context_1.id;
-    var core_1, http_1, Observable_1, language_1, JsonService;
+    var core_1, http_1, Observable_1, language_1;
+    var JsonService;
     return {
-        setters: [
+        setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             },
@@ -22,17 +23,13 @@ System.register(["@angular/core", "@angular/http", "rxjs/Observable", "rxjs/add/
             function (Observable_1_1) {
                 Observable_1 = Observable_1_1;
             },
-            function (_1) {
-            },
-            function (_2) {
-            },
-            function (_3) {
-            },
+            function (_1) {},
+            function (_2) {},
+            function (_3) {},
             function (language_1_1) {
                 language_1 = language_1_1;
-            }
-        ],
-        execute: function () {
+            }],
+        execute: function() {
             JsonService = (function () {
                 function JsonService(http) {
                     this.http = http;
@@ -64,14 +61,15 @@ System.register(["@angular/core", "@angular/http", "rxjs/Observable", "rxjs/add/
                     console.log('JsonService::mapLanguages', res.json());
                     return language_1.Language.asLanguages(res.json());
                 };
+                JsonService = __decorate([
+                    core_1.Injectable(), 
+                    __metadata('design:paramtypes', [http_1.Http])
+                ], JsonService);
                 return JsonService;
             }());
-            JsonService = __decorate([
-                core_1.Injectable(),
-                __metadata("design:paramtypes", [http_1.Http])
-            ], JsonService);
             exports_1("JsonService", JsonService);
         }
-    };
+    }
 });
+
 //# sourceMappingURL=json-service.js.map

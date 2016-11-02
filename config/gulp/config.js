@@ -19,6 +19,29 @@ module.exports = function () {
             app: './site/web/app/',
             fonts: './site/web/fonts/',
             assets: './site/web/assets/'
+        },
+        vendor = {
+            bower: './vendor/bower/',
+            js: './vendor/js/'
+        },
+        bower = {
+            components: './bower_components'
+        },
+        extraFiles = {
+          js: {
+            vendor: {
+              files: [
+                vendor.bower + "zepto/zepto.js"
+              ]
+            },
+            targetPath: build.path + 'lib/',
+            targetFilename: 'vendor.js'
+          },
+          css: {
+            vendor: {
+              files: []
+            }
+          }
         };
 
     var gulpConfig = {
@@ -30,8 +53,10 @@ module.exports = function () {
         assets: assets,
         assetsPath: assetsPath,
         index: index,
-        build: build
-
+        build: build,
+        vendor: vendor,
+        bower: bower,
+        extraFiles: extraFiles
     };
 
     return gulpConfig;

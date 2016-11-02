@@ -4,6 +4,9 @@ node_modules
 typings
 *.bak
 *.bkp
+*.zip
 .DS_Store
 Thumbs.db
 src/assets/fonts/bootstrap/*
+bower_components
+vendor/bower

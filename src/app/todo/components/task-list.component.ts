@@ -30,6 +30,15 @@ export class TaskListComponent implements OnInit {
           console.log('Ready to Zepto!');
 
           $(".red_square").addClass("move");
+
+          $(".some_element").animate({
+            opacity: 0.25,
+            //left: '50px',
+            backgroundColor: '#abcdef',
+            rotateZ: '45deg',
+            translate3d: '0,10px,0'
+          }, 4500, 'ease-out');
+
         });
 
     }

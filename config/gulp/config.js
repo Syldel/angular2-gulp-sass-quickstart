@@ -31,7 +31,10 @@ module.exports = function () {
           js: {
             vendor: {
               files: [
-                vendor.bower + "zepto/zepto.js"
+                vendor.bower + 'zepto-sources/src/zepto.js',
+                vendor.bower + 'zepto-sources/src/event.js',
+                vendor.bower + 'zepto-sources/src/fx.js',
+                vendor.bower + 'zepto-sources/src/fx_methods.js'
               ]
             },
             targetPath: build.path + 'lib/',

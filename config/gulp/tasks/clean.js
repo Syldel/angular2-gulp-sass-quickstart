@@ -56,3 +56,8 @@ gulp.task('clean-bower-components', () => {
   return gulp.src(config.bower.components, {read: false})
     .pipe(clean());
 });
+
+gulp.task('clean-vendor-bower', () => {
+  return gulp.src(config.vendor.bower, {read: false})
+    .pipe(clean());
+});

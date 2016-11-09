@@ -9,7 +9,7 @@ var uglify = require('gulp-uglify');
 const runSequence = require('run-sequence');
 
 gulp.task('bower', function(cb) {
-  runSequence('bower-install', 'vendor-js', 'clean-bower-components', cb);
+  runSequence('clean-vendor-bower', 'bower-install', 'vendor-js', 'clean-bower-components', cb);
 });
 
 gulp.task('bower-install', function() {
